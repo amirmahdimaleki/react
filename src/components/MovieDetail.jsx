@@ -1,3 +1,4 @@
+// 
 // MovieDetails.js
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
@@ -7,7 +8,6 @@ const MovieDetails = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
 
-  // Fetch movie details from TMDb API
   useEffect(() => {
     const fetchMovieDetails = async () => {
       try {
