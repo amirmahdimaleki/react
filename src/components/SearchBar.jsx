@@ -35,20 +35,22 @@ import { searchMovies } from '../redux/movieSlice';
 const SearchBar = () => {
   const dispatch = useDispatch();
   const [searchTerm, setSearchTerm] = useState('');
-
-  const handleSearch = () => {
+  const handleSearch = (e) => {
+    e.preventDefault();
     dispatch(searchMovies(searchTerm));
   };
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="Search movies..."
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-      />
-      <button onClick={handleSearch}>Search</button>
+      <form onSubmit={handleSearch}>
+        <input
+          type="text"
+          placeholder="Search movies..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <button>Search</button>
+      </form>
     </div>
   );
 };

@@ -22,12 +22,12 @@
 // export const { setMovies, searchMovies } = moviesSlice.actions;
 // export default moviesSlice.reducer;
 
-
 // movieSlice.js
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
   movies: [],
+  searchTerm: '',
 };
 
 export const movieSlice = createSlice({
@@ -38,10 +38,11 @@ export const movieSlice = createSlice({
       state.movies = action.payload;
     },
     searchMovies: (state, action) => {
-      const searchTerm = action.payload.toLowerCase();
-      state.movies = state.movies.filter(movie =>
-        movie.title.toLowerCase().includes(searchTerm)
-      );
+      // const searchTerm = action.payload.toLowerCase();
+      // state.movies = state.movies.filter(movie =>
+      //   movie.title.toLowerCase().includes(searchTerm)
+      // );
+      state.searchTerm = action.payload;
     },
   },
 });
