@@ -18,7 +18,6 @@
 
 // export default MovieList;
 
-
 // MovieList.js
 // import { useSelector } from 'react-redux';
 // import { Link } from 'react-router-dom';
@@ -82,4 +81,3 @@ const MovieList = () => {
 };
 
 export default MovieList;
-

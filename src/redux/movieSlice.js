@@ -22,7 +22,6 @@
 // export const { setMovies, searchMovies } = moviesSlice.actions;
 // export default moviesSlice.reducer;
 
-
 // movieSlice.js
 // import { createSlice } from '@reduxjs/toolkit';
 
